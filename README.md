@@ -23,3 +23,7 @@ Colección de scripts de Python para generar figuras útiles en la materia Labor
 - ```errores/errores.py```: Genera un gráfico de puntos con barras de error en el eje vertical.
 - ```errores/generar_datos.py```: Script que genera datos artificiales para ser usados en los gráficos.
 - ```errores/data.csv```: Contiene los datos generados por ```generar_datos.py```.
+
+## ```ajustes/```
+
+- ```ajustes/lineal.py```: Genera un gráfico con los datos en ```errores/data.csv``` y hace un ajuste lineal sobre los mismos.
