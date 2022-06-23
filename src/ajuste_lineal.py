@@ -13,7 +13,7 @@ def linear(x, pendiente, ordenada):
 
 
 def main():
-    # Leer datos del directorio errores/
+    # Leer datos
     data = np.loadtxt('datos/errores.csv')
     x, y, y_err = data[:, 0], data[:, 1], data[:, 2]
 
