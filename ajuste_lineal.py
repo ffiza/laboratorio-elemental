@@ -29,7 +29,7 @@ def main():
     ax.set_xlabel('$x$')
     ax.set_ylabel('$y$')
     ax.set_xlim(0, 10)
-    ax.set_xticks([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+    ax.set_xticks([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
     ax.set_ylim(0, 20)
     plt.errorbar(x, y, y_err, fmt='o', elinewidth=.75, capsize=2, markersize=1)
     plt.plot(x, linear(x, *popt), '--', color='tab:red', lw=1)
