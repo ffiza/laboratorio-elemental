@@ -3,8 +3,6 @@
 # Author:  Federico Iza
 # ----------------------------------------------------------------------------
 import numpy as np
-import os
-import sys
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 from config import config_plots
