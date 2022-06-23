@@ -4,26 +4,9 @@ Colección de scripts de Python para generar figuras útiles en la materia Labor
 
 ## Descripción
 
-## ```histograma/```
-
-- ```histograma/ocurrencias.py```: Genera un histograma donde el eje vertical tiene la cantidad de ocurrencias en cada bin.
-- ```histograma/densidad.py```: Genera un histograma donde el eje vertical tiene la densidad de probabilidad. Esto se logra usando ```density=True``` en ```plt.hist```.
-- ```histograma/bineado.py```: Genera la densidad de probabilidad para tres bineados distintos.
-- ```histograma/generar_datos.py```: Script que genera datos artificiales para ser usados en los histogramas.
-- ```histograma/data.csv```: Contiene los datos generados por ```generar_datos.py```.
-
-## ```scatter/```
-
-- ```scatter/scatter.py```: Genera un gráfico tipo _scatter_.
-- ```scatter/generar_datos.py```: Script que genera datos artificiales para ser usados en los gráficos.
-- ```scatter/data.csv```: Contiene los datos generados por ```generar_datos.py```.
-
-## ```errores/```
-
-- ```errores/errores.py```: Genera un gráfico de puntos con barras de error en el eje vertical.
-- ```errores/generar_datos.py```: Script que genera datos artificiales para ser usados en los gráficos.
-- ```errores/data.csv```: Contiene los datos generados por ```generar_datos.py```.
-
-## ```ajustes/```
-
-- ```ajustes/lineal.py```: Genera un gráfico con los datos en ```errores/data.csv``` y hace un ajuste lineal sobre los mismos.
+- ```ajuste_lineal.py```: Genera un gráfico con los datos en ```datos/errores.csv``` y hace un ajuste lineal sobre los mismos.
+- ```config.py```: Contiene una función que configura el aspecto de los gráficos.
+- ```errores.py```: Genera un gráfico de puntos con barras de error en el eje vertical.
+- ```generar_datos.py```: Script que genera datos artificiales para ser usados en los gráficos.
+- ```histograma.py```: Genera tres histogramas (ocurrencias, densidad de probabilidad y densidad de probabilidad con distinto bineado).
+- ```scatter.py```: Genera un gráfico tipo _scatter_.
