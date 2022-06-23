@@ -33,12 +33,12 @@ def main():
     plt.plot(x, linear(x, *popt), '--', color='tab:red', lw=1)
     ax.text(.5, 18, '$y(x) = mx+b$', color='tab:red', size=6)
 
-    slope_str = f'$m =$ {round(popt[0], 2)}' + rf'$\pm$ {round(perr[0], 2)}'
+    slope_str = f'$m =$ {round(popt[0], 2)} ' + rf'$\pm$ {round(perr[0], 2)}'
     ax.text(.5, 17, slope_str, color='tab:red', size=6)
-    inter_str = f'$b =$ {round(popt[1], 2)}' + rf'$\pm$ {round(perr[1], 2)}'
+    inter_str = f'$b =$ {round(popt[1], 2)} ' + rf'$\pm$ {round(perr[1], 2)}'
     ax.text(.5, 16, inter_str, color='tab:red', size=6)
 
-    fig.savefig('figuras/ajuste_lineal.pdf')
+    fig.savefig('figuras/ajuste_lineal.png')
     # plt.show()
 
 

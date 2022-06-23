@@ -7,7 +7,7 @@ from distutils.spawn import find_executable
 
 
 def config_plots():
-    params = {'figure.dpi': 300,
+    params = {'figure.dpi': 500,
               'figure.figsize': [3, 2.5],
               'font.size': 8,
               'font.family': 'serif',

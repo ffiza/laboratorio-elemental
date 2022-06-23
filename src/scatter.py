@@ -22,7 +22,7 @@ def main():
     ax.set_ylim(0, 20)
     plt.scatter(x, y, s=15, linewidths=.5, edgecolors='white')
     # plt.show()
-    fig.savefig('figuras/scatter.pdf')
+    fig.savefig('figuras/scatter.png')
 
 
 if __name__ == '__main__':

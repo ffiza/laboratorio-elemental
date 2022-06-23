@@ -19,7 +19,7 @@ def graficar_ocurrencias():
     ax.set_xticks([.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5])
     ax.set_ylim(0, 80)
     plt.hist(data, alpha=0.75)
-    fig.savefig('figuras/histograma_ocurrencias.pdf')
+    fig.savefig('figuras/histograma_ocurrencias.png')
     # plt.show()
 
 
@@ -35,7 +35,7 @@ def graficar_pdf():
     ax.set_xticks([.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5])
     ax.set_ylim(0, 4.2)
     plt.hist(data, density=True, alpha=0.75)
-    fig.savefig('figuras/histograma_densidad.pdf')
+    fig.savefig('figuras/histograma_densidad.png')
     # plt.show()
 
 
@@ -56,7 +56,7 @@ def graficar_pdf_bineados():
         plt.hist(data, bins=bins, density=True, histtype='step', alpha=0.75,
                  label=bins)
     ax.legend(loc='upper left', framealpha=0)
-    fig.savefig('figuras/histograma_pdf_bineado.pdf')
+    fig.savefig('figuras/histograma_pdf_bineado.png')
     # plt.show()
 
 
