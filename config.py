@@ -28,5 +28,6 @@ def config_plots():
               'grid.linestyle': '--',
               'grid.linewidth': .5}
     # Si LaTeX está instalado, usar sus fuentes
-    if find_executable('latex'): params['text.usetex'] = True
+    if find_executable('latex'):
+        params['text.usetex'] = True
     plt.rcParams.update(params)
