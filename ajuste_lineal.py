@@ -7,7 +7,6 @@ import os
 import sys
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))  # Agregar path para usar config.py
 from config import config_plots
 
 
@@ -17,7 +16,7 @@ def linear(x, pendiente, ordenada):
 
 def main():
     # Leer datos del directorio errores/
-    data = np.loadtxt('../errores/data.csv')
+    data = np.loadtxt('datos/errores.csv')
     x, y, y_err = data[:, 0], data[:, 1], data[:, 2]
 
     # Hacer ajuste
@@ -37,8 +36,8 @@ def main():
     ax.text(.5, 18, '$y(x) = mx+b$', color='tab:red', size=6)
     ax.text(.5, 17, f'$m =$ {round(popt[0], 2)} $\pm$ {round(perr[0], 2)}', color='tab:red', size=6)
     ax.text(.5, 16, f'$b =$ {round(popt[1], 2)} $\pm$ {round(perr[1], 2)}', color='tab:red', size=6)
+    fig.savefig('figuras/ajuste_lineal.pdf')
     # plt.show()
-    fig.savefig('lineal.pdf')
 
 
 if __name__ == '__main__':
