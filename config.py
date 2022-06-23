@@ -3,12 +3,15 @@
 # Author:  Federico Iza
 # ----------------------------------------------------------------------------
 import matplotlib.pyplot as plt
+from distutils.spawn import find_executable
 
 
 def config_plots():
     params = {'figure.dpi': 300,
               'figure.figsize': [3, 2.5],
               'font.size': 8,
+              'font.family': 'serif',
+              'axes.labelsize': 10,
               'xtick.top': 'on',
               'xtick.minor.bottom': 'on',
               'xtick.minor.top': 'on',
@@ -24,4 +27,6 @@ def config_plots():
               'axes.grid': True,
               'grid.linestyle': '--',
               'grid.linewidth': .5}
+    # Si LaTeX está instalado, usar sus fuentes
+    if find_executable('latex'): params['text.usetex'] = True
     plt.rcParams.update(params)
