@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------
-# Title:   Crear gráfico con barra de error
+# Title:   Crear gráfico con barras de error
 # Author:  Federico Iza
 # ----------------------------------------------------------------------------
 import numpy as np
