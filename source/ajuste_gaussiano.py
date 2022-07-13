@@ -5,6 +5,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
+import pandas as pd
 from utils.config import config_plots
 import sys
 
@@ -17,10 +18,10 @@ def gaussian(x, mu, sigma):
 
 def main():
     # Leer datos
-    data = np.loadtxt('datos/histograma.csv')
+    df = pd.read_csv('../data/histograma.csv')
 
     # Construir histograma
-    hist, bin_edges = np.histogram(data, density=True)
+    hist, bin_edges = np.histogram(df['x'], density=True)
     bin_centers = bin_edges[1:] - np.diff(bin_edges)[0]/2
 
     # Hacer ajuste
@@ -35,12 +36,11 @@ def main():
     ax.set_xlim(0.8, 1.6)
     ax.set_xticks([.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5])
     ax.set_ylim(0, 4.2)
-    plt.hist(data, density=True, alpha=0.75)
+    plt.hist(df['x'], density=True, alpha=0.75)
     x = np.linspace(0.8, 1.6, 100)
-    plt.plot(x, gaussian(x, *popt), '--',
-             color='tab:red', lw=1)
+    plt.plot(x, gaussian(x, *popt), '--', color='tab:red', lw=1)
 
-    fig.savefig('figuras/ajuste_gaussiano.png')
+    fig.savefig('../images/ajuste_gaussiano.png')
     # plt.show()
 
     # Print fit results

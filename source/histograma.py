@@ -5,11 +5,12 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from utils.config import config_plots
+import pandas as pd
 
 
 def graficar_ocurrencias():
     # Cargar datos
-    data = np.loadtxt('datos/histograma.csv')
+    df = pd.read_csv('../data/histograma.csv')
     # Generar gráfico
     fig, ax = plt.subplots()
     ax.minorticks_on()
@@ -18,14 +19,14 @@ def graficar_ocurrencias():
     ax.set_xlim(.8, 1.6)
     ax.set_xticks([.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5])
     ax.set_ylim(0, 80)
-    plt.hist(data, alpha=0.75)
-    fig.savefig('figuras/histograma_ocurrencias.png')
+    plt.hist(df['x'], alpha=0.75)
+    fig.savefig('../images/histograma_ocurrencias.png')
     # plt.show()
 
 
 def graficar_pdf():
     # Cargar datos
-    data = np.loadtxt('datos/histograma.csv')
+    df = pd.read_csv('../data/histograma.csv')
     # Generar gráfico
     fig, ax = plt.subplots()
     ax.minorticks_on()
@@ -34,14 +35,14 @@ def graficar_pdf():
     ax.set_xlim(.8, 1.6)
     ax.set_xticks([.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5])
     ax.set_ylim(0, 4.2)
-    plt.hist(data, density=True, alpha=0.75)
-    fig.savefig('figuras/histograma_densidad.png')
+    plt.hist(df['x'], density=True, alpha=0.75)
+    fig.savefig('../images/histograma_densidad.png')
     # plt.show()
 
 
 def graficar_pdf_bineados():
     # Cargar datos
-    data = np.loadtxt('datos/histograma.csv')
+    df = pd.read_csv('../data/histograma.csv')
     # Definir tres bineados
     binnings = [10, 15, 20]  # Número de bines
     # Generar gráfico
@@ -53,10 +54,9 @@ def graficar_pdf_bineados():
     ax.set_xticks([.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5])
     ax.set_ylim(0, 4.2)
     for bins in binnings:
-        plt.hist(data, bins=bins, density=True, histtype='step', alpha=0.75,
-                 label=bins)
+        plt.hist(df['x'], bins=bins, density=True, histtype='step', alpha=0.75, label=bins)
     ax.legend(loc='upper left', framealpha=0)
-    fig.savefig('figuras/histograma_pdf_bineado.png')
+    fig.savefig('../images/histograma_pdf_bineado.png')
     # plt.show()
 
 
