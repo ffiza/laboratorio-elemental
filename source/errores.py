@@ -1,17 +1,16 @@
 # ----------------------------------------------------------------------------
-# Title:   Crear scatter plot
+# Title:   Crear gráfico con barras de error
 # Author:  Federico Iza
 # ----------------------------------------------------------------------------
 import numpy as np
 import matplotlib.pyplot as plt
-from config import config_plots
+from utils.config import config_plots
 
 
 def main():
     # Cargar datos
     data = np.loadtxt('datos/errores.csv')
-    x, y = data[:, 0], data[:, 1]
-
+    x, y, y_err = data[:, 0], data[:, 1], data[:, 2]
     # Generar gráfico
     fig, ax = plt.subplots()
     ax.minorticks_on()
@@ -20,9 +19,9 @@ def main():
     ax.set_xlim(0, 10)
     ax.set_xticks([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
     ax.set_ylim(0, 20)
-    plt.scatter(x, y, s=15, linewidths=.5, edgecolors='white')
+    plt.errorbar(x, y, y_err, fmt='o', elinewidth=.75, capsize=2, markersize=1)
+    fig.savefig('figuras/errores.png')
     # plt.show()
-    fig.savefig('figuras/scatter.png')
 
 
 if __name__ == '__main__':

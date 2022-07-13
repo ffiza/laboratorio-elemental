@@ -4,7 +4,7 @@
 # ----------------------------------------------------------------------------
 import numpy as np
 import matplotlib.pyplot as plt
-from config import config_plots
+from utils.config import config_plots
 
 
 def graficar_ocurrencias():

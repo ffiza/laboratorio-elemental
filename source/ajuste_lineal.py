@@ -5,7 +5,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
-from config import config_plots
+from utils.config import config_plots
 
 
 def linear(x, pendiente, ordenada):
