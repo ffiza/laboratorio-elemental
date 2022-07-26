@@ -18,7 +18,8 @@ def main():
     ax.set_xlim(0, 10)
     ax.set_xticks([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
     ax.set_ylim(0, 20)
-    plt.errorbar(df['x'], df['y'], df['y_err'], fmt='o', elinewidth=.75, capsize=2, markersize=1)
+    plt.errorbar(df['x'], df['y'], df['y_err'], fmt='o', elinewidth=.75,
+                 capsize=2, markersize=1)
     fig.savefig('../images/errores.png')
     # plt.show()
 

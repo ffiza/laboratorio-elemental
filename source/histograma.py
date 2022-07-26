@@ -54,7 +54,8 @@ def graficar_pdf_bineados():
     ax.set_xticks([.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5])
     ax.set_ylim(0, 4.2)
     for bins in binnings:
-        plt.hist(df['x'], bins=bins, density=True, histtype='step', alpha=0.75, label=bins)
+        plt.hist(df['x'], bins=bins, density=True, histtype='step',
+                 alpha=0.75, label=bins)
     ax.legend(loc='upper left', framealpha=0)
     fig.savefig('../images/histograma_pdf_bineado.png')
     # plt.show()
