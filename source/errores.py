@@ -1,14 +1,18 @@
-# ----------------------------------------------------------------------------
 # Title:   Crear gráfico con barras de error
-# ----------------------------------------------------------------------------
+
 import matplotlib.pyplot as plt
 import pandas as pd
 from utils.config import config_plots
 
 
-def main():
+def main() -> None:
+    """
+    Lee datos de archivo y genera un gráfico con barras de error.
+    """
+    
     # Cargar datos
     df = pd.read_csv('../data/errores.csv')
+    
     # Generar gráfico
     fig, ax = plt.subplots()
     ax.minorticks_on()
@@ -17,7 +21,7 @@ def main():
     ax.set_xlim(0, 10)
     ax.set_xticks([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
     ax.set_ylim(0, 20)
-    plt.errorbar(df['x'], df['y'], df['y_err'], fmt='o', elinewidth=.75,
+    plt.errorbar(df.x, df.y, df.y_err, fmt='o', elinewidth=.75,
                  capsize=2, markersize=1)
     fig.savefig('../images/errores.png')
     # plt.show()
