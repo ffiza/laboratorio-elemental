@@ -1,6 +1,5 @@
 # ----------------------------------------------------------------------------
 # Title:   Script para configurar los gráficos
-# Author:  Federico Iza
 # ----------------------------------------------------------------------------
 import matplotlib.pyplot as plt
 from distutils.spawn import find_executable

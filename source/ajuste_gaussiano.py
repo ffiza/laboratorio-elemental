@@ -1,6 +1,5 @@
 # ----------------------------------------------------------------------------
 # Title:   Ajuste gaussiano
-# Author:  Federico Iza
 # ----------------------------------------------------------------------------
 import numpy as np
 import matplotlib.pyplot as plt

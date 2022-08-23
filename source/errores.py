@@ -1,6 +1,5 @@
 # ----------------------------------------------------------------------------
 # Title:   Crear gráfico con barras de error
-# Author:  Federico Iza
 # ----------------------------------------------------------------------------
 import matplotlib.pyplot as plt
 import pandas as pd
